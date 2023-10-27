@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "64uWzliQEVQhU8XNVienOPaKfKlK9Hh3mrgMWK8PY4o=",
+  "Hash": "cEKLVCad9HRU7SsyAKabj0E2M46FhUA4MG4vlGmycvQ=",
   "Source": "Projeto",
   "BasePath": "_content/Projeto",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Dev\\Projeto\\wwwroot\\imagens\\card1.png",
+      "SourceId": "Projeto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\Projeto\\wwwroot\\",
+      "BasePath": "_content/Projeto",
+      "RelativePath": "imagens/card1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\card1.png"
+    },
+    {
+      "Identity": "C:\\Dev\\Projeto\\wwwroot\\imagens\\card2.png",
+      "SourceId": "Projeto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\Projeto\\wwwroot\\",
+      "BasePath": "_content/Projeto",
+      "RelativePath": "imagens/card2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\card2.png"
     },
     {
       "Identity": "C:\\Dev\\Projeto\\wwwroot\\imagens\\carrossel01.png",

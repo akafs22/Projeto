@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\card1.png",
+      "PackagePath": "staticwebassets\\imagens\\card1.png"
+    },
+    {
+      "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\card2.png",
+      "PackagePath": "staticwebassets\\imagens\\card2.png"
+    },
+    {
       "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\carrossel01.png",
       "PackagePath": "staticwebassets\\imagens\\carrossel01.png"
     },
