@@ -23,9 +23,9 @@ namespace Projeto.Areas.Admin.Controllers
         // GET: Admin/AdminCategoria
         public async Task<IActionResult> Index()
         {
-              return _context.Categorias != null ? 
-                          View(await _context.Categorias.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Categorias'  is null.");
+            return _context.Categorias != null ?
+                        View(await _context.Categorias.ToListAsync()) :
+                        Problem("Entity set 'AppDbContext.Categorias'  is null.");
         }
 
         // GET: Admin/AdminCategoria/Details/5
@@ -149,16 +149,25 @@ namespace Projeto.Areas.Admin.Controllers
             var categoria = await _context.Categorias.FindAsync(id);
             if (categoria != null)
             {
-                _context.Categorias.Remove(categoria);
+                try
+                {
+                    _context.Categorias.Remove(categoria);
+                    await _context.SaveChangesAsync();
+                }catch(DbUpdateConcurrencyException ex){
+                    if(ex.InnerException.ToString().Contains("FOREIGN KEY")){
+                        ViewData["Erro"] = "Essa categoria não pode ser deletada pois já está sendo utilzada em um item";
+                        return View();
+                    }
+                }
             }
-            
-            await _context.SaveChangesAsync();
+
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool CategoriaExists(int id)
         {
-          return (_context.Categorias?.Any(e => e.CategoriaId == id)).GetValueOrDefault();
+            return (_context.Categorias?.Any(e => e.CategoriaId == id)).GetValueOrDefault();
         }
     }
 }
