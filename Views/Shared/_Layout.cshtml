@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8" />
@@ -8,43 +8,46 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Projeto.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Projeto</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img
+                        src="~/imagens/logo.png" alt="task order"></a>
+                <button class="navbar-toggler button-ligth" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Admin"
+                            <a class="nav-link text-white" asp-area="Admin" asp-controller="Admin"
                                 asp-action="Index">Admin</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ">
 
                             @await Component.InvokeAsync("CategoriaMenu")
 
                         </li>
 
-                        <li class="nav-item">
+                <li class="nav-item ms-auto">
+                    <form class="navbar-form navbar-right d-flex" asp-controller="Item" asp-action="Search" method="get">
+                        <div class="form-group me-3 ">
+                            <input type="text" class="form-control" placeholder="Pesquisa" name="searchString"
+                                value="@ViewData["searchString"]">
+                        </div>
+                        <button clas="btn btn-light rounded">Buscar</button>
+                    </form>
+                </li>
+                       
 
-                            <form class="navbar-form navbar-right" asp-controller="Item" asp-action="Search"
-                                method="get">
-
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Procurar produto"
-                                        name="searchString" value="@ViewData["searchString"]">
-                                </div>
-                            </form>
-                        </li>
                         <li>
                             @await Component.InvokeAsync("CarrinhoResumo")
                         </li>
@@ -59,11 +62,63 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Projeto - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="row bg-black text-white p-4">
+         <div class="col-12 col-sm-3">
+                <h3>   Quem somos</h3>
+                <ul>
+                    <dl>Institucional</dl>
+                    <dl>Franquias</dl>
+                    <dl>Trabalhe conosco</dl>
+                    <dl>Privacidade</dl>
+                    <dl>Publicidade</dl>
+                    <dl>Responsável</dl>
+                </ul>
+        </div>
+
+        <div class="col-12 col-sm-3">
+                <h3>Família</h3>
+                <ul>
+                    <dl>Lançamentos</dl>
+                    <dl>Compromisso com as famílias</dl>
+                </ul>
+        </div>
+
+        <div class="col-12 col-sm-3">
+             <h3>Para você</h3>
+                <ul>
+                    <dl>Aplicativo</dl>
+                    <dl>Delivery</dl>
+                    <dl>Peça e retire</dl>
+                    <dl>Gift Card</dl>
+                    <dl>Drive Thru</dl>
+                </ul>
+        </div>
+
+        <div class="col-12 col-sm-3">
+             <h3>Contato</h3>
+                <ul>
+                    <dl>Fale conosco</dl>
+                    <dl>Contato</dl>
+                </ul>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center gap-3 p-4 border-top border-2">
+            <i class="bi bi-facebook h1"></i>
+            <i class="bi bi-twitter-x h1"></i>
+            <i class="bi bi-instagram h1"></i>
+            <i class="bi bi-linkedin h1"></i>
+        </div>
+        
+        <div class="col-12">
+            <ul class="list-unstyled d-flex gap-5">
+                  <li>Privacidade</li>
+            <li>Termos e Condições</li>
+            </ul>
+          
         </div>
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

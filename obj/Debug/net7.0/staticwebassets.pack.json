@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\carrossel01.png",
+      "PackagePath": "staticwebassets\\imagens\\carrossel01.png"
+    },
+    {
+      "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\carrossel02.png",
+      "PackagePath": "staticwebassets\\imagens\\carrossel02.png"
+    },
+    {
+      "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\carrossel03.png",
+      "PackagePath": "staticwebassets\\imagens\\carrossel03.png"
+    },
+    {
+      "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\lasanhakakakkaak.jpg",
+      "PackagePath": "staticwebassets\\imagens\\lasanhakakakkaak.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Projeto\\wwwroot\\imagens\\logo.png",
+      "PackagePath": "staticwebassets\\imagens\\logo.png"
+    },
+    {
       "Id": "C:\\Dev\\Projeto\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
